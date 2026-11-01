@@ -5,7 +5,7 @@ RUN rm -rf /usr/share/nginx/html/*
 
 # Copy the Haruna Family static pages into Nginx public directory
 COPY *.html /usr/share/nginx/html/
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY deploy/nginx/haruna-family.web.id.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 
