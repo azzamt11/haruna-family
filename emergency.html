@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emergency Broadcast · Haruna Family</title>
+  <style>
+    :root { --ink:#17221f; --muted:#74817a; --paper:#fbfaf7; --card:#fff; --line:#dce4dd; --soft:#f7e2db; --green:#dcebe0; --danger:#a94f45; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; color:var(--ink); background:radial-gradient(circle at 80% 5%,#f6ddd2 0,transparent 25%),var(--paper); font:14px/1.45 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    .page { width:min(100% - 32px,620px); margin:auto; padding:30px 0 55px; }
+    header { display:flex; align-items:center; justify-content:space-between; margin-bottom:38px; } .brand { color:var(--muted); font-size:.73rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase; } .brand span { color:#b56f5c; } .back { color:var(--muted); text-decoration:none; } .back:hover { color:var(--ink); }
+    .intro { padding:27px 26px; border:1px solid #e4c4ba; border-radius:14px; background:linear-gradient(135deg,rgba(247,226,219,.72),rgba(255,255,255,.55)); } .eyebrow { margin:0 0 8px; color:var(--danger); font-size:11px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; } h1 { margin:0; font:500 clamp(2.2rem,7vw,3.5rem)/1 Georgia,serif; letter-spacing:-.04em; } .intro p { margin:12px 0 0; max-width:460px; color:#776c68; }
+    .feed { margin-top:22px; padding:4px 18px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:rgba(255,255,255,.55); }
+    .broadcast { padding:21px 0; border-bottom:1px solid var(--line); } .broadcast:last-child { border-bottom:0; } .broadcast-header { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:8px; } .author { display:flex; align-items:center; gap:9px; font-weight:700; } .avatar { display:grid; place-items:center; width:30px; height:30px; border-radius:50%; background:var(--green); color:#47745a; font-size:12px; } time { color:var(--muted); font-size:12px; } .broadcast p { margin:0; color:#40504a; font-size:15px; line-height:1.55; white-space:pre-line; } .status { display:inline-block; margin-top:13px; padding:4px 9px; border-radius:99px; background:var(--soft); color:var(--danger); font-size:11px; font-weight:700; }
+    .note { margin:18px 0 0; color:var(--muted); font-size:12px; text-align:center; }
+    @media (max-width:500px) { .page { width:min(100% - 24px,620px); padding-top:22px; } .intro { padding:23px 20px; } .feed { padding:4px 14px; } }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header><div class="brand">Haruna <span>Family</span></div><a class="back" href="index.html">← Back home</a></header>
+    <section class="intro"><p class="eyebrow">Family alert channel</p><h1>Emergency Broadcast</h1><p>Important updates for the Haruna family, shared in one calm and easy-to-find place.</p></section>
+    <section class="feed" aria-label="Emergency broadcasts">
+      <article class="broadcast"><div class="broadcast-header"><div class="author"><span class="avatar">H</span><span>Haruna Family</span></div><time datetime="2026-11-01">Today, 9:42 AM</time></div><p>Welcome to the family broadcast channel. This space is ready for urgent updates when everyone needs to know something quickly.</p><span class="status">Family update</span></article>
+      <article class="broadcast"><div class="broadcast-header"><div class="author"><span class="avatar">M</span><span>Mom</span></div><time datetime="2026-10-31">Yesterday, 6:15 PM</time></div><p>Placeholder broadcast: please replace this message with an important family announcement.</p><span class="status">Reminder</span></article>
+    </section>
+    <p class="note">Broadcasts are read-only for now. Login and sending controls will be added later.</p>
+  </main>
+</body><script>if (sessionStorage.getItem('haruna-authenticated') !== 'true') window.location.replace('index.html');</script>
+</html>

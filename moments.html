@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moments · Haruna Family</title>
+  <style>
+    :root { --ink:#17221f; --muted:#66736d; --paper:#fbfaf7; --line:#dce4dd; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:radial-gradient(circle at 85% 5%,#f6ddd2 0,transparent 25%),var(--paper); font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    .page { width:min(100% - 40px,900px); margin:auto; padding:40px 0 60px; }
+    header { display:flex; align-items:center; justify-content:space-between; gap:20px; margin-bottom:62px; }
+    .brand { color:var(--muted); font-size:.73rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase; } .brand span { color:#b56f5c; }
+    .back { color:var(--muted); text-decoration:none; font-size:.86rem; } .back:hover { color:var(--ink); }
+    .intro { max-width:590px; margin-bottom:52px; } .eyebrow,.date { margin:0 0 12px; color:#b56f5c; text-transform:uppercase; letter-spacing:.16em; font-size:.7rem; font-weight:800; }
+    h1 { margin:0; font:500 clamp(2.8rem,7vw,5rem)/.95 Georgia,serif; letter-spacing:-.05em; } .intro p:not(.eyebrow) { max-width:480px; margin:20px 0 0; color:var(--muted); line-height:1.65; }
+    .timeline { position:relative; margin-left:20px; padding-left:42px; border-left:1px solid #c7d3ca; } .entry { position:relative; padding:0 0 52px; } .entry:last-child { padding-bottom:0; }
+    .entry:before { content:""; position:absolute; left:-49px; top:4px; width:13px; height:13px; border:4px solid var(--paper); border-radius:50%; background:#b56f5c; box-shadow:0 0 0 1px #b56f5c; }
+    .date { margin-bottom:8px; } h2 { margin:0; font:500 1.8rem/1.1 Georgia,serif; } .entry p:not(.date) { max-width:580px; margin:10px 0 20px; color:var(--muted); line-height:1.6; }
+    .photos { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; } .photo { aspect-ratio:1.25; display:grid; place-items:center; border:1px dashed #aebdb2; border-radius:5px; background:linear-gradient(135deg,#dce9df,#faf6ee); color:#839188; font-size:.75rem; letter-spacing:.05em; text-transform:uppercase; } .photo:nth-child(2) { background:linear-gradient(135deg,#f6ddd2,#faf6ee); } .photo:nth-child(3) { background:linear-gradient(135deg,#dee7ef,#faf6ee); }
+    @media (max-width:600px) { .page { width:min(100% - 28px,500px); padding-top:28px; } header { margin-bottom:48px; } .timeline { margin-left:10px; padding-left:30px; } .entry:before { left:-37px; } .photos { grid-template-columns:1fr 1fr; } .photo:last-child { display:none; } }
+  </style>
+</head>
+<body><main class="page">
+  <header><div class="brand">Haruna <span>Family</span></div><a class="back" href="index.html">← Back home</a></header>
+  <section class="intro"><p class="eyebrow">Our story so far</p><h1>Little moments,<br>kept close.</h1><p>A gentle timeline for the days, celebrations, and spontaneous snapshots that make our family ours.</p></section>
+  <section class="timeline" aria-label="Family moments timeline">
+    <article class="entry"><p class="date">Today · 2026</p><h2>A new chapter begins</h2><p>This is where a new family memory will go. Add a short note about the day and place your favorite photos below.</p><div class="photos"><div class="photo">Photo placeholder</div><div class="photo">Photo placeholder</div><div class="photo">Photo placeholder</div></div></article>
+    <article class="entry"><p class="date">A favorite day · 2025</p><h2>Gathered around the table</h2><p>Good food, familiar stories, and everyone together. Replace this placeholder with a memory whenever you’re ready.</p><div class="photos"><div class="photo">Photo placeholder</div><div class="photo">Photo placeholder</div></div></article>
+    <article class="entry"><p class="date">The beginning · 2024</p><h2>Where our story starts</h2><p>Every family has a beginning. This space is ready for the first photo and the story behind it.</p><div class="photos"><div class="photo">Photo placeholder</div></div></article>
+  </section>
+</main><script>if (sessionStorage.getItem('haruna-authenticated') !== 'true') window.location.replace('index.html');</script></body>
+</html>

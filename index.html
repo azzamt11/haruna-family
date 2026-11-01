@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Haruna Family</title>
+  <style>
+    :root { --ink:#17221f; --muted:#66736d; --paper:#fbfaf7; --line:#dce4dd; --sage:#dce9df; --coral:#f3c3b2; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; color:var(--ink); background:radial-gradient(circle at 20% 10%,#eef5ef 0,transparent 34%),var(--paper); font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    .page { width:min(100% - 40px, 820px); min-height:100vh; margin:auto; display:flex; flex-direction:column; justify-content:center; align-items:center; padding:36px 0; }
+    .brand { align-self:flex-start; margin-bottom:30px; letter-spacing:.14em; text-transform:uppercase; font-size:.73rem; font-weight:800; color:var(--muted); }
+    .brand span { color:#b56f5c; }
+    .hero { width:100%; display:grid; grid-template-columns:minmax(0,1.1fr) minmax(220px,.9fr); gap:34px; align-items:center; }
+    .photo { min-height:360px; border:1px solid #bfcac1; border-radius:6px; background:linear-gradient(145deg,rgba(255,255,255,.5),rgba(222,235,225,.8)), repeating-linear-gradient(115deg,transparent 0 24px,rgba(255,255,255,.22) 25px 27px); display:grid; place-items:center; position:relative; overflow:hidden; box-shadow:0 20px 55px rgba(68,88,76,.08); }
+    .photo:before,.photo:after { content:""; position:absolute; border-radius:50%; background:rgba(243,195,178,.62); }
+    .photo:before { width:190px;height:190px;right:-42px;top:-54px; }
+    .photo:after { width:130px;height:130px;left:-35px;bottom:-38px;background:rgba(184,209,190,.72); }
+    .photo-content { position:relative; z-index:1; text-align:center; }
+    .photo-content small { display:block; margin-bottom:10px; color:var(--muted); font-size:.72rem; letter-spacing:.18em; text-transform:uppercase; }
+    .photo-content h1 { margin:0; font-family:Georgia,serif; font-size:clamp(2.3rem,6vw,4.2rem); font-weight:500; letter-spacing:-.04em; }
+    .photo-content p { margin:14px 0 0; color:var(--muted); font-size:.9rem; }
+    .copy { max-width:310px; }
+    .eyebrow { margin:0 0 12px; color:#b56f5c; text-transform:uppercase; letter-spacing:.16em; font-size:.7rem; font-weight:800; }
+    .copy h2 { margin:0; font-family:Georgia,serif; font-size:clamp(2rem,5vw,3.2rem); line-height:1.02; font-weight:500; }
+    .copy p { margin:18px 0 28px; color:var(--muted); line-height:1.65; font-size:.96rem; }
+    .actions { display:flex; flex-wrap:wrap; gap:10px; }
+    button,.button { border:1px solid var(--ink); border-radius:999px; padding:12px 19px; background:transparent; color:var(--ink); font:inherit; font-size:.88rem; cursor:pointer; transition:.2s ease; text-decoration:none; display:inline-block; }
+    button:hover,button:focus-visible { transform:translateY(-2px); background:var(--ink); color:white; outline:none; }
+    button.primary { background:var(--ink); color:#fff; }
+    button.primary:hover,button.primary:focus-visible { background:#405850; border-color:#405850; }
+    .footer { margin-top:42px; color:#84908a; font-size:.74rem; }
+    dialog { width:min(92vw,420px); border:1px solid var(--line); border-radius:18px; padding:28px; color:var(--ink); box-shadow:0 20px 80px rgba(24,40,33,.2); }
+    dialog::backdrop { background:rgba(20,30,25,.25); backdrop-filter:blur(3px); }
+    dialog h3 { margin:0 0 9px; font-family:Georgia,serif; font-size:1.7rem; font-weight:500; }
+    dialog p { margin:0 0 20px; color:var(--muted); line-height:1.55; }
+    .close { border-color:var(--line); color:var(--muted); }
+    .login-form { display:grid; gap:12px; margin-top:20px; }
+    .login-form label { color:var(--muted); font-size:.78rem; font-weight:700; }
+    .login-form input { width:100%; margin-top:5px; border:1px solid var(--line); border-radius:8px; padding:11px 12px; color:var(--ink); background:#fff; font:inherit; }
+    .login-form input:focus { outline:2px solid #c6ddca; border-color:#8fb49a; }
+    .login-error { min-height:18px; margin:0; color:#a94f45; font-size:.78rem; }
+    .login-actions { display:flex; justify-content:flex-end; gap:9px; margin-top:3px; }
+    @media (max-width:650px) { .page { width:min(100% - 28px,500px); padding:28px 0; } .brand { margin-bottom:24px; } .hero { grid-template-columns:1fr; gap:26px; } .photo { min-height:270px; } .copy { max-width:none; text-align:center; } .actions { justify-content:center; } .footer { margin-top:30px; } }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="brand">Haruna <span>Family</span></div>
+    <section class="hero" aria-label="Haruna family home">
+      <div class="photo" role="img" aria-label="Family photo placeholder">
+        <div class="photo-content"><small>Our little world</small><h1>Family Photo</h1><p>Home is wherever we are together.</p></div>
+      </div>
+      <div class="copy">
+        <p class="eyebrow">Welcome home</p>
+        <h2>Made of ordinary days &amp; favorite people.</h2>
+        <p>A simple place to keep our memories close, stay connected, and look out for one another.</p>
+        <nav class="actions" aria-label="Family navigation">
+          <a class="button primary" href="moments.html">Moments</a>
+          <a class="button" href="manage.html">Manage</a>
+          <a class="button" href="emergency.html">Emergency Broadcast</a>
+        </nav>
+      </div>
+    </section>
+    <div class="footer">With love, the Haruna family · 2026</div>
+  </main>
+  <dialog id="manage"><h3>Manage family</h3><p>Invite a family member, update your profile, or choose who can see your shared space.</p><button class="close" data-close>Close</button></dialog>
+  <dialog id="emergency"><h3>Emergency broadcast</h3><p>Send an urgent message to everyone in the Haruna family. Please use this only when it matters.</p><button class="primary" data-close>Got it</button></dialog>
+  <dialog id="login"><h3>Welcome back</h3><p>Sign in with the phone number connected to your family account.</p><form class="login-form" id="login-form"><label>Phone number<input id="phone" type="tel" autocomplete="username" inputmode="tel" placeholder="+62 812 3456 7890" required /></label><label>Password<input id="password" type="password" autocomplete="current-password" placeholder="Your password" required /></label><p class="login-error" id="login-error" role="alert"></p><div class="login-actions"><button type="button" class="close" data-close>Cancel</button><button type="submit" class="primary">Sign in</button></div></form></dialog>
+  <script>
+    const API_BASE = window.HARUNA_API_BASE || 'http://localhost:8080';
+    const login = document.getElementById('login');
+    let nextPage = '';
+    document.querySelectorAll('.actions a').forEach(link => link.addEventListener('click', event => {
+      if (sessionStorage.getItem('haruna-authenticated') !== 'true') { event.preventDefault(); nextPage = link.href; login.showModal(); }
+    }));
+    document.getElementById('login-form').addEventListener('submit', async event => {
+      event.preventDefault();
+      const phone = document.getElementById('phone').value.trim();
+      const password = document.getElementById('password').value;
+      const error = document.getElementById('login-error');
+      if (!phone || password.length < 4) { error.textContent = 'Please enter a phone number and a password with at least 4 characters.'; return; }
+      error.textContent = 'Signing in…';
+      try {
+        const response = await fetch(`${API_BASE}/login`, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ phone, password }) });
+        if (!response.ok) { error.textContent = await response.text() || 'Invalid phone number or password.'; return; }
+        const data = await response.json();
+        localStorage.setItem('token', data.token);
+        localStorage.setItem('user', JSON.stringify(data.user));
+        sessionStorage.setItem('haruna-authenticated', 'true');
+        login.close();
+        if (nextPage) window.location.href = nextPage;
+      } catch (requestError) { error.textContent = 'Unable to reach the family login service.'; }
+    });
+    document.querySelectorAll('[data-dialog]').forEach(button => button.addEventListener('click', () => document.getElementById(button.dataset.dialog).showModal()));
+    document.querySelectorAll('[data-close]').forEach(button => button.addEventListener('click', () => button.closest('dialog').close()));
+    document.querySelectorAll('dialog').forEach(dialog => dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); }));
+  </script>
+</body>
+</html>
