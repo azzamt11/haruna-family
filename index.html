@@ -68,7 +68,7 @@
   <dialog id="emergency"><h3>Emergency broadcast</h3><p>Send an urgent message to everyone in the Haruna family. Please use this only when it matters.</p><button class="primary" data-close>Got it</button></dialog>
   <dialog id="login"><h3>Welcome back</h3><p>Sign in with the phone number connected to your family account.</p><form class="login-form" id="login-form"><label>Phone number<input id="phone" type="tel" autocomplete="username" inputmode="tel" placeholder="+62 812 3456 7890" required /></label><label>Password<input id="password" type="password" autocomplete="current-password" placeholder="Your password" required /></label><p class="login-error" id="login-error" role="alert"></p><div class="login-actions"><button type="button" class="close" data-close>Cancel</button><button type="submit" class="primary">Sign in</button></div></form></dialog>
   <script>
-    const API_BASE = window.HARUNA_API_BASE || 'http://localhost:8080';
+    const API_BASE = window.HARUNA_API_BASE || 'https://threads-api.aazzam.my.id';
     const login = document.getElementById('login');
     let nextPage = '';
     document.querySelectorAll('.actions a').forEach(link => link.addEventListener('click', event => {

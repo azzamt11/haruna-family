@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: haruna_family_frontend_app
+    ports:
+      - "3002:80"
+    restart: unless-stopped
